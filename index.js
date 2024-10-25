@@ -15,16 +15,22 @@ function loop_func() {
             return response.json();
         })
         .then(data => {
+            // Actualizar información del usuario
             document.getElementById("username").textContent = data.User;
             document.getElementById("icon").src = `https://retroachievements.org${data.UserPic}`;
-            document.getElementById("score").textContent = `Score: ${data.TotalPoints}`;
-            document.getElementById("rich").textContent = `Dato Rich: ${data.RichPresenceMsg}`;
-
             
+            // Información del juego reciente
             const recentGame = data.RecentlyPlayed[0];
             //document.getElementById("game_title").textContent = recentGame.Title;
             //document.getElementById("game_icon").src = `https://retroachievements.org${recentGame.ImageIcon}`;
 
+            // Calcular y mostrar el porcentaje de progreso
+            const { NumPossibleAchievements, NumAchieved } = data.Awarded[recentGame.GameID];
+            const progressPercentage = ((NumAchieved / NumPossibleAchievements) * 100).toFixed(2) + '%';
+            document.getElementById("score").textContent = `Score: ${data.TotalPoints} - Progreso: ${progressPercentage}`;
+            document.getElementById("rich").textContent = `Dato Rich: ${data.RichPresenceMsg}`;
+
+            // Información del primer trofeo reciente
             const recentAchievement = data.RecentAchievements[recentGame.GameID];
             const firstAchievement = Object.values(recentAchievement)[0];
             document.getElementById("trophee_icon").src = `https://retroachievements.org/Badge/${firstAchievement.BadgeName}.png`;
@@ -36,5 +42,6 @@ function loop_func() {
         });
 }
 
+// Ejecutar la función inmediatamente y luego cada 10 segundos
 loop_func();
 setInterval(loop_func, 10000);
