@@ -1,0 +1,29 @@
+body{
+    color: rgb(33, 146, 190);
+}
+
+h2{
+    text-align: center;
+}
+
+.background{
+    background-image: url(https://media.istockphoto.com/id/1194212027/vector/a-vector-illustration-textured-black-colored-grungy-old-background-resembling-a-slate-rock.jpg?s=612x612&w=0&k=20&c=bnYb1yYXV1nQ53vtmsWTSBO-YnVScZiyKfKjoTIo9Jo=);
+    border-radius: 20px;
+    border: 5px solid rgb(33, 146, 190);
+}
+
+.icon{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid rgb(33, 146, 190);
+}
+
+.points{
+    color: rgb(252, 199, 28);
+}
+
+.trophee_title{
+    color: rgb(252, 199, 28);
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
