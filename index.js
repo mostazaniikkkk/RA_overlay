@@ -107,4 +107,4 @@ fetchPlayerData();
 setInterval(fetchPlayerData, 10000);
 
 // Alternar las funciones cada minuto en una corrutina separada
-setInterval(displayController, 60000);
+setInterval(displayController, 30000);

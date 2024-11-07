@@ -8,9 +8,9 @@ function userData(data, url){
     .then(rank_data => {
     const additionalInfo = document.getElementById("additional_info");
     additionalInfo.innerHTML = `
-    <div class="row">
+    <h5>Informacion del jugador:</h5> 
+    <div class="row data_card">
         <div class="col-12"> 
-        <h5>Informacion del jugador:</h5> 
         </div>
         <div class="col-6"> 
         <p class="info"><b class="points" id="points">Puntos:</b></p> 

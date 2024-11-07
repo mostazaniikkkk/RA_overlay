@@ -49,3 +49,12 @@ body{
 .info{
     margin-bottom: 7px;
 }
+
+.data_card{
+    background-color: #6969696e;
+    width: 100%;
+    height: 50vh;
+    margin: 0 auto;
+    border: 3px solid rgb(252, 199, 28);
+    border-radius: 20px;
+}
