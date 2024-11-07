@@ -4,6 +4,9 @@ body{
 
 .background{
     background-image: url(https://media.istockphoto.com/id/1194212027/vector/a-vector-illustration-textured-black-colored-grungy-old-background-resembling-a-slate-rock.jpg?s=612x612&w=0&k=20&c=bnYb1yYXV1nQ53vtmsWTSBO-YnVScZiyKfKjoTIo9Jo=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 20px;
     border: 5px solid rgb(33, 146, 190);
 }
@@ -22,4 +25,27 @@ body{
     color: rgb(252, 199, 28);
     margin-top: 5px;
     margin-bottom: 15px;
+}
+
+.trophy {
+    height: 40vh; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.info{
+    margin-bottom: 7px;
 }
