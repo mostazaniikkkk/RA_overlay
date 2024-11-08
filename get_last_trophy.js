@@ -26,7 +26,10 @@ function updateModules(data) {
     // Información del primer trofeo reciente
     const recentAchievement = data.RecentAchievements[data.RecentlyPlayed[0].GameID];
     const firstAchievement = Object.values(recentAchievement)[0];
-    document.getElementById("trophee_icon").src = `https://retroachievements.org/Badge/${firstAchievement.BadgeName}.png`;
-    document.getElementById("trophee_title").textContent = firstAchievement.Title;
-    document.getElementById("trophee_desc").textContent = firstAchievement.Description;
+    try{
+        document.getElementById("trophee_icon").src = `https://retroachievements.org/Badge/${firstAchievement.BadgeName}.png`;
+        document.getElementById("trophee_title").textContent = firstAchievement.Title;
+        document.getElementById("trophee_desc").textContent = firstAchievement.Description;
+    }
+    catch{console.log("no hay trofeo xd.")}
 }
